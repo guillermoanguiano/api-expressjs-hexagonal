@@ -1,10 +1,25 @@
 {
+	"name": "api-expressjs-hexagonal",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node dist/main.js",
+		"build": "npx tsc ./src/main.ts -d --outDir dist",
+		"dev": "npx ts-node ./src/main.ts"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
 	"dependencies": {
 		"express": "^4.21.2",
 		"pg": "^8.13.1"
 	},
 	"devDependencies": {
 		"@types/express": "^5.0.0",
-		"@types/pg": "^8.11.10"
+		"@types/pg": "^8.11.10",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.7.2"
 	}
 }
