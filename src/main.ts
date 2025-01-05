@@ -9,7 +9,7 @@ app.use(ExpressUserRouter);
 app.use((err: unknown, req: Request, res: Response, next: NextFunction): any => {
     if (err instanceof Error) {
         console.error(err.stack);
-        return res.status(500).send(err.message);
+        return res.status(500).json({ message: err.message });
     }
 
     console.error(err);

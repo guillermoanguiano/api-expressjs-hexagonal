@@ -5,10 +5,10 @@ const controller = new ExpressUserController();
 
 const ExpressUserRouter = Router();
 
-ExpressUserRouter.get("/user/", controller.getAll);
-ExpressUserRouter.get("/user/:id/", controller.getById);
-ExpressUserRouter.post("/user/", controller.create);
-ExpressUserRouter.put("/user/", controller.edit);
-ExpressUserRouter.delete("/user/:id", controller.delete);
+ExpressUserRouter.get("/users/", controller.getAll);
+ExpressUserRouter.get("/users/:id/", controller.getById);
+ExpressUserRouter.post("/users/", controller.create);
+ExpressUserRouter.put("/users/", controller.edit);
+ExpressUserRouter.delete("/users/:id", controller.delete);
 
 export { ExpressUserRouter };
