@@ -56,6 +56,9 @@ export class ExpressUserController {
 
             return res.status(204).send();
         } catch (error) {
+            if (error instanceof UserNotFoundError) {
+                return res.status(404).json({ message: error.message });
+            }
             next(error);
         }
     }
@@ -66,6 +69,9 @@ export class ExpressUserController {
 
             return res.status(204).send();
         } catch (error) {
+            if (error instanceof UserNotFoundError) {
+                return res.status(404).json({ message: error.message });
+            }
             next(error);
         }
     }
