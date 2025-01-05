@@ -4,6 +4,8 @@ import { ExpressUserRouter } from './lib/User/infrastructure/ExpressUserRouter';
 
 const app = express();
 
+app.use(express.json());
+
 app.use(ExpressUserRouter);
 
 app.use((err: unknown, req: Request, res: Response, next: NextFunction): any => {
@@ -13,7 +15,7 @@ app.use((err: unknown, req: Request, res: Response, next: NextFunction): any => 
     }
 
     console.error(err);
-    return res.status(500).send('Something went wrong!');
+    return res.status(500).json({ message: 'Something went wrong' });
 })
 
 app.listen(3000, () => console.log('Server running on port 3000'));

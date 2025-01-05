@@ -12,4 +12,12 @@ export class User {
         this.name = name;
         this.email = email;
     }
+
+    public mapToDto() {
+        return {
+            id: this.id.value,
+            name: this.name.value,
+            email: this.email.value
+        }
+    }
 }
