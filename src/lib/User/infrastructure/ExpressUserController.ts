@@ -1,6 +1,8 @@
 import { NextFunction, Request, Response } from "express";
 import { UserNotFoundError } from "../domain/UserNotFoundError";
-import { ServiceContainer } from "src/lib/Shared/infrastructure/ServiceContainer";
+//@ts-ignore
+import { ServiceContainer } from "../../Shared/Infrastructure/ServiceContainer";
+
 
 export class ExpressUserController {
     async create(req: Request, res: Response, next: NextFunction): Promise<void> {

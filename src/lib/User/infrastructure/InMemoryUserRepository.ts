@@ -7,7 +7,7 @@ import { UserRepository } from '../domain/UserRepository';
 export class InMemoryUserRepository implements UserRepository {
 
     private users: User[] = [{
-        id: new UserId('1'),
+        id: new UserId('111111'),
         name: new UserName('John Doe'),
         email: new UserEmail('pZmDx@example.com')
     }];
